@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>614</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Smart Notes</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : &quot;#212121&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>36</y>
+      <width>421</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid white;
+border-bottom-right-radius: 6px;
+border-top-right-radius: 6px;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="enterTag_le">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>336</y>
+      <width>271</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid white;
+border-bottom-right-radius : 5px;
+border-top-right-radius : 5px;
+border-bottom-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>Enter tag...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="newNote_btn">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>360</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-bottom-right-radius : 5px;
+border-top-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>New Note</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteNote_btn">
+    <property name="geometry">
+     <rect>
+      <x>528</x>
+      <y>360</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-top-right-radius : 5px;
+border-bottom-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>Delete Note</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addTag_btn">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>335</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-bottom-right-radius : 5px;
+border-top-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>Add Tag</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="note_label">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>81</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white</string>
+    </property>
+    <property name="text">
+     <string>Notes</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="tags_list">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>240</y>
+      <width>161</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+border : 1px solid white;
+border-radius : 6px;
+color : white;</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="notes_list">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>161</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+border : 1px solid white;
+border-radius : 6px;
+color : white;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tags_label">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>220</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white;</string>
+    </property>
+    <property name="text">
+     <string>Tags</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="search_btn">
+    <property name="geometry">
+     <rect>
+      <x>359</x>
+      <y>335</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-bottom-right-radius : 5px;
+border-top-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="name_le">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>421</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid white;
+border-bottom-right-radius : 5px;
+border-top-right-radius : 5px;
+border-top-left-radius : 5px;
+</string>
+    </property>
+    <property name="text">
+     <string>Name...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="unpinNote_btn">
+    <property name="geometry">
+     <rect>
+      <x>527</x>
+      <y>390</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-top-left-radius : 5px;
+border-bottom-right-radius : 5px</string>
+    </property>
+    <property name="text">
+     <string>Unpin Note</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addNote_btn">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>390</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : &quot;#303030&quot;;
+color : white;
+border : 1px solid &quot;#e8e8e8&quot;;
+border-top-right-radius : 5px;
+border-bottom-left-radius : 5px;</string>
+    </property>
+    <property name="text">
+     <string>Add Note</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
