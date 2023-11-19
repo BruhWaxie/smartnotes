@@ -135,7 +135,7 @@ class Ui_MainWindow(object):
         self.search_btn.setText(_translate("MainWindow", "Search"))
         self.name_le.setText(_translate("MainWindow", "Name..."))
         self.unpinNote_btn.setText(_translate("MainWindow", "Unpin Note"))
-        self.addNote_btn.setText(_translate("MainWindow", "Add Note"))
+        self.addNote_btn.setText(_translate("MainWindow", "Save Note"))
 
 
 if __name__ == "__main__":
