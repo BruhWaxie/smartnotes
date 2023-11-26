@@ -18,7 +18,8 @@ class NoteWindow(QMainWindow):
         self.ui.newNote_btn.clicked.connect(self.add_note)
         self.ui.addNote_btn.clicked.connect(self.save_note)
         self.ui.deleteNote_btn.clicked.connect(self.del_note)
-
+        self.ui.addTag_btn.clicked.connect(self.add_tag)
+        self.ui.unpinNote_btn.clicked.connect(self.del_tag)
     def read_notes(self):
         try:
             with open('notes.json', 'r',encoding='utf-8') as file:
@@ -57,8 +58,12 @@ class NoteWindow(QMainWindow):
     def save_note(self):
         title = self.ui.name_le.text()
         text = self.ui.textEdit.toPlainText()
-        
-        self.notes[title] = {'text' : text, 'tags' : []}
+        if title not in self.notes:
+
+            self.notes[title] = {'text' : text, 'tags' : []}
+        else:
+            self.notes[title][text] = text
+
         self.save_file()
         self.ui.notes_list.clear()
         self.ui.notes_list.addItems(self.notes)
@@ -72,7 +77,27 @@ class NoteWindow(QMainWindow):
             self.save_file()
             self.add_note()
 
+    def del_tag(self):
+        title = self.ui.name_le.text()
+        try:
+            tag_title = self.ui.tags_list.selectedItems()[0].text()
+        except:
+            self.title = None
+        if tag_title != 'Enter Tag' or "":
+            self.notes[title]['tags'].remove(tag_title)
+            self.ui.enterTag_le.clear()
+            self.ui.tags_list.clear()
+            self.ui.tags_list.addItems(self.notes[title]['tags'])
 
+
+    def add_tag(self):
+        title = self.ui.name_le.text()
+        tag_title = self.ui.enterTag_le.text()
+        if tag_title != 'Enter Tag' or "":
+            self.notes[title]['tags'].append(tag_title)
+            self.ui.enterTag_le.clear()
+            self.ui.tags_list.clear()
+            self.ui.tags_list.addItems(self.notes[title]['tags'])
 
 app = QApplication([])
 ex = NoteWindow()
